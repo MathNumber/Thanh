@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Led 8x8</title>
+</head>
+<body>
+    <button id="Nutral">Nutral Eyes</button>
+    <br><br>
+    <button id="Blink">Blink Eyes</button>
+    <br><br>
+    <button id="Wink">Wink Eyes</button>
+    <br><br>
+    <button id="Left">Left Eyes</button>
+    <br><br>
+    <button id="Right">Right Eyes</button>
+    <br><br>
+    <button id="Up">Up Eyes</button>
+    <br><br>
+    <button id="Down">Down Eyes</button>
+    <br><br>
+    <button id="Angry">Angry Eyes</button>
+    <br><br>
+    <button id="Sad">Sad Eyes</button>
+    
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyDuKoXrjZKq1bbfHCQihFHRr-UflukYnaU",
+        databaseURL: "https://led8x-451e8-default-rtdb.asia-southeast1.firebasedatabase.app/",
+        authDomain: "led8x-451e8.firebaseapp.com",
+        projectId: "led8x-451e8",
+        storageBucket: "led8x-451e8.appspot.com",
+        messagingSenderId: "1091180491963",
+        appId: "1:1091180491963:web:2faa3f820d9dcda4fb259e",
+        measurementId: "G-L7Y4CFL5K5"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+
+      
+      import {getDatabase, ref, child, get, set} from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+      const db = getDatabase();
+      let a = document.getElementById("Nutral");
+      let b = document.getElementById("Blink");
+      let c = document.getElementById("Wink");
+      let d = document.getElementById("Left");
+      let e = document.getElementById("Right");
+      let f = document.getElementById("Up");
+      let g = document.getElementById("Down");
+      let h = document.getElementById("Angry");
+      let j = document.getElementById("Sad");
+
+      function setAni0() {
+        set(ref(db, '/Type'), {
+          Val: 0,
+        })
+        .then(() => {
+          alert("Data saved successfully");
+        })
+        .catch(error)((err) => {
+          alert("Error");
+          console.log(err);
+        })
+      }
+      function setAni1() {
+        set(ref(db, '/Type'), {
+          Val: 1,
+        })
+        .then(() => {
+          alert("Data saved successfully");
+        })
+        .catch(error)((err) => {
+          alert("Error");
+          console.log(err);
+        })
+      }
+      function setAni2() {
+        set(ref(db, '/Type'), {
+          Val: 2,
+        })
+        .then(() => {
+          alert("Data saved successfully");
+        })
+        .catch(error)((err) => {
+          alert("Error");
+          console.log(err);
+        })
+      }
+      function setAni3() {
+        set(ref(db, '/Type'), {
+          Val: 3,
+        })
+        .then(() => {
+          alert("Data saved successfully");
+        })
+        .catch(error)((err) => {
+          alert("Error");
+          console.log(err);
+        })
+      }
+      function setAni4() {
+        set(ref(db, '/Type'), {
+          Val: 4,
+        })
+        .then(() => {
+          alert("Data saved successfully");
+        })
+        .catch(error)((err) => {
+          alert("Error");
+          console.log(err);
+        })
+      }
+      function setAni5() {
+        set(ref(db, '/Type'), {
+          Val: 5,
+        })
+        .then(() => {
+          alert("Data saved successfully");
+        })
+        .catch(error)((err) => {
+          alert("Error");
+          console.log(err);
+        })
+      }
+      function setAni6() {
+        set(ref(db, '/Type'), {
+          Val: 6,
+        })
+        .then(() => {
+          alert("Data saved successfully");
+        })
+        .catch(error)((err) => {
+          alert("Error");
+          console.log(err);
+        })
+      }
+      function setAni7() {
+        set(ref(db, '/Type'), {
+          Val: 7,
+        })
+        .then(() => {
+          alert("Data saved successfully");
+        })
+        .catch(error)((err) => {
+          alert("Error");
+          console.log(err);
+        })
+      }
+      function setAni8() {
+        set(ref(db, '/Type'), {
+          Val: 8,
+        })
+        .then(() => {
+          alert("Data saved successfully");
+        })
+        .catch(error)((err) => {
+          alert("Error");
+          console.log(err);
+        })
+      }
+
+      a.addEventListener('click', setAni0)
+      b.addEventListener('click', setAni1)
+      c.addEventListener('click', setAni2)
+      d.addEventListener('click', setAni3)
+      e.addEventListener('click', setAni4)
+      f.addEventListener('click', setAni5)
+      g.addEventListener('click', setAni6)
+      h.addEventListener('click', setAni7)
+      j.addEventListener('click', setAni8)
+    </script>
+</body>
+</html>
